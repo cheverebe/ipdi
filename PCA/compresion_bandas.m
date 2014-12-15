@@ -18,7 +18,7 @@ function [ output_args ] = compresion_bandas( img, cantCanales )
     C = A*A';
     
     [V,D]=eig(C);
-    [S, I] = sort(sum(D),'ascend');
+    [S, I] = sort(sum(D),'descend');
     I = I(1:cantCanales);
     s = size(I);
     V2 = cell(s(2),1);
