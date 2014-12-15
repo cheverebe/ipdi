@@ -1,0 +1,7 @@
+function [ out ] = lena_con_ruido( cantRuido )
+    lena = imread('../Images_test/lena.png');
+    s = size(lena);
+    ruido = randn(s)
+    out = uint16(lena + ruido * cantRuido;
+end
+
