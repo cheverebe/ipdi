@@ -4,6 +4,7 @@ function [ res ] = antifou2d( A )
     s = size(A);
     F = antifourier(s(1));
     res = F * A *F';
+    res = im2uint8(res);
 end
 
 

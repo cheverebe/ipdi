@@ -1,0 +1,19 @@
+function [ ] = ej2( )
+    senial = [ 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0];
+    subplot(4,1,1)
+    imshow(senial,[0,1])
+    
+    f = fourier(16);
+    
+    fs = f * senial';
+    subplot(4,1,2)
+    imagesc(abs(fs))
+    
+    a = antifourier(16);
+    o = a * fs;
+    subplot(4,1,4)
+    ou = im2uint8(o)
+    imagesc(abs(ou))
+    
+end
+
